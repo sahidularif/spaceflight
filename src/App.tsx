@@ -1,12 +1,13 @@
 import './App.scss'
-import './index.scss'
+import './styles/index.scss'
+import Home from './components/home'
 
 function App() {
 
 
   return (
     <>
-   <h1>Hello</h1>
+   <Home/>
     </>
   )
 }

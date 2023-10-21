@@ -1,0 +1,142 @@
+$base_color: #212529;
+$gray_600: #6C757D;
+$gray_700: #495057;
+$gray_800: #343A40;
+$gray_900: #212529;
+$color_failed: #DC3545;
+$color_success: #198754;
+
+body {
+    width: 100%;
+    font-family: Barlow;
+    margin: 0px auto;
+}
+
+.header {
+    text-align: center;
+    padding: 0 32px;
+}
+
+.header h1 {
+    color: $base_color;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.header p {
+    color: $gray_700;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.lunches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;   
+}
+
+.lunch {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #CED4DA;
+}
+
+.lunch_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.lunch_date {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: $gray_600;
+}
+
+.lunch_date span:last-child {
+    color: $gray_800;
+}
+
+.lunch_name h4 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.lunch_name p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.lunch_status h6 {
+    color: $gray_600;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.lunch_status {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lunch_status button {
+    display: flex;
+    padding: 4.2px 7.8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: $gray_600;
+}
+.btn-success {
+    background-color: #198754;
+}
+.btn-failed {
+    background-color: #DC3545;
+}
+
+.lunch_status button h6 {
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    color: white;
+}
+// 
+@media only screen and (min-width: 64em) {
+    body {
+        padding: 6rem;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    body {
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 767px) {
+    body {
+        padding: 2rem;
+    }
+}
