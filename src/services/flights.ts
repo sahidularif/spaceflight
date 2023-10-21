@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { IGetFlightsResponse } from '../models';
+import { IFlight, IGetFlightsResponse } from '../models';
+import useFlights from '../context/useFlight';
 3
 export const getFlights = async () => {
 
@@ -12,7 +13,7 @@ export const getFlights = async () => {
   const myData = data.map((item: any) => {
     const items = {
       flightNumber: item.flight_number,
-      lunchDate: item.lunch_date,
+      lunchDate: item.launch_date_utc,
       lunchStatus: item.launch_success,
       missionName: item.mission_name,
       rocketName: item.rocket.rocket_name,
@@ -22,3 +23,4 @@ export const getFlights = async () => {
   })
   return myData;
 };
+

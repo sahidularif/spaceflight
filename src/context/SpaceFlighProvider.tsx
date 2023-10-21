@@ -5,10 +5,8 @@ export interface IFlightsContext {
   setIsFetching(state: boolean): void;
   flights: IFlight[];
   setFlights(flights: IFlight[]): void;
-  filters: string[];
-  setFilters(filters: string[]): void;
-  filteredRockets: IFlight[]
-  setFilteredRockets: (flights: IFlight[]) => void
+  filteredFlights: IFlight[]
+  setFilteredFlights: (flights: IFlight[]) => void
 }
 
 // Flight Context
@@ -31,18 +29,15 @@ const useFlightContext = (): IFlightsContext => {
 const FlightProvider: FC = (props) => {
   const [isFetching, setIsFetching] = useState(false);
   const [flights, setFlights] = useState<IFlight[]>([]);
-  const [filteredRockets, setFilteredRockets] = useState<IFlight[]>([]);
-  const [filters, setFilters] = useState<string[]>([]);
+  const [filteredFlights, setFilteredFlights] = useState<IFlight[]>([]);
 
   const FlightContextValue: IFlightsContext = {
     isFetching,
     setIsFetching,
     flights,
     setFlights,
-    filters,
-    setFilters,
-    filteredRockets,
-    setFilteredRockets
+    filteredFlights,
+    setFilteredFlights
   };
 
   return <FlightContext.Provider value={FlightContextValue} {...props} />;

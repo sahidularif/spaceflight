@@ -1,12 +1,12 @@
-import Header from "./header";
+import Navbar from "./Navbar";
 import Pagination from "./pagination";
-import Search from "./searchBar";
+import Header from "./Header";
 
 const Home = () => {
     return (
         <>
+            <Navbar/>
             <Header/>
-            <Search/>
             <Pagination/>
             
         </>

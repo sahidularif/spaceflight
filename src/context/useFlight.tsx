@@ -10,7 +10,8 @@ const useFlights = () => {
     setIsFetching,
     flights,
     setFlights,
-    filters,
+    setFilteredFlights,
+    filteredFlights,
     // setFilters,
   } = useFlightContext();
 
@@ -19,37 +20,17 @@ const useFlights = () => {
     getFlights().then((data: IFlight[]) => {
       setIsFetching(false);
       setFlights(data);
+      setFilteredFlights(data)
     });
-  }, [setIsFetching, setFlights]);
+  }, [setIsFetching, setFilteredFlights, setFlights]);
 
-  // const filterProducts = (filters: string[]) => {
-  //   setIsFetching(true);
-
-  //   getProducts().then((products: IFlight[]) => {
-  //     setIsFetching(false);
-  //     let filteredProducts;
-
-  //     if (filters && filters.length > 0) {
-  //       filteredProducts = products.filter((p: IFlight) =>
-  //         filters.find((filter: string) =>
-  //           p.availableSizes.find((size: string) => size === filter)
-  //         )
-  //       );
-  //     } else {
-  //       filteredProducts = products;
-  //     }
-
-  //     setFilters(filters);
-  //     setFlights(filteredProducts);
-  //   });
-  // };
 
   return {
     isFetching,
     fetchFlight,
     flights,
-    // filterProducts,
-    filters,
+    filteredFlights,
+    setFilteredFlights
   };
 };
 
