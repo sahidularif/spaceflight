@@ -35,7 +35,9 @@
 
    npm start or yarn start
    ```
-**Open the code and start customizing!**
+
+## 🚀 Open the code and start customizing!
+****
 
    Your site is now running at http://localhost:3000!
 
@@ -46,6 +48,7 @@
 [AppLink](https://vibrant-booth-1de4aa.netlify.app/)
 
 ### STACK:
+
 **React** for frontend,
 
 **Tailwindcss** as a UI library
