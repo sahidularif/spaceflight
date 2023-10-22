@@ -1,4 +1,4 @@
-import { createContext, useContext, FC, useState } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import {IFlight} from '../models'
 export interface IFlightsContext {
   isFetching: boolean;
@@ -24,9 +24,11 @@ const useFlightContext = (): IFlightsContext => {
 
   return context;
 };
-
+type FlightProviderProps = {
+  children: ReactNode
+}
 // Flight Provider
-const FlightProvider: FC = (props) => {
+const FlightProvider = ({children}: FlightProviderProps) => {
   const [isFetching, setIsFetching] = useState(false);
   const [flights, setFlights] = useState<IFlight[]>([]);
   const [filteredFlights, setFilteredFlights] = useState<IFlight[]>([]);
@@ -40,7 +42,9 @@ const FlightProvider: FC = (props) => {
     setFilteredFlights
   };
 
-  return <FlightContext.Provider value={FlightContextValue} {...props} />;
+  return <FlightContext.Provider value={FlightContextValue} >
+    {children}
+  </FlightContext.Provider>;
 };
 
 export { FlightProvider, useFlightContext };

@@ -1,7 +1,4 @@
 import axios from 'axios';
-import { IFlight, IGetFlightsResponse } from '../models';
-import useFlights from '../context/useFlight';
-3
 export const getFlights = async () => {
 
   const response = await axios.get(

@@ -7,7 +7,7 @@ import { FlightProvider } from './context/SpaceFlighProvider.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <FlightProvider>
-    <App />
+      <App />
     </FlightProvider>
   </React.StrictMode>,
 )

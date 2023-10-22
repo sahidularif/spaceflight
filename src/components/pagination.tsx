@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Lunches from './lunches';
-import PaginateTable from './paginateTable';
 import useFlights from '../context/useFlight';
 import '../styles/index.scss'
 const Pagination: React.FC = () => {
-    const { isFetching, fetchFlight, filteredFlights } = useFlights()
+    const { fetchFlight, filteredFlights } = useFlights()
     const [currentPage, setcurrentPage] = useState<number>(1);
-    const [itemsPerPage, setitemsPerPage] = useState(9);
+    const [itemsPerPage] = useState(9);
 
-    const [pageNumberLimit, setpageNumberLimit] = useState(5);
+    const [pageNumberLimit] = useState(5);
     const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
 
-    const handleClick = (event: ChangeEvent<HTMLInputElement>) => {
-        setcurrentPage(Number(event.target.id));
+    const handleItemClick = (id: number) => {
+        setcurrentPage(id)
+        console.log(id)
     };
-
     const pages = [];
     for (let i = 1; i <= Math.ceil(filteredFlights.length / itemsPerPage); i++) {
         pages.push(i);
@@ -28,21 +27,14 @@ const Pagination: React.FC = () => {
     const renderPageNumbers = pages.map((number) => {
         if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
             return (
-                // <li
-                //     key={number}
-                //     id={number}
-                //     onClick={handleClick}
-                //     className="active"
-                // >
-                //     {number}
-                // </li>
-                <a
+
+                <li
                     key={number}
-                    id={number}
-                    onClick={handleClick}
+                    onClick={() => handleItemClick(number)}
+                    value={number}
                     className="relative inline-flex items-center px-4 py-2 text-sm font-semibold focus:bg-black text-primary ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-primary focus:z-20 focus:outline-offset-0">
                     {number}
-                </a>
+                </li>
             );
         } else {
             return null;
@@ -98,7 +90,7 @@ const Pagination: React.FC = () => {
     return (
         <div className=' mt-6'>
             <Lunches data={currentItems} />
-            <div className="flex flex-row gap-5 items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+            <div className="flex flex-row gap-5 items-center justify-between border-gray-200 bg-white px-4 py-3 sm:px-6">
 
                 <div className="hidden sm:flex sm:flex-col-reverse gap-5 sm:flex-1 sm:items-center sm:justify-between">
                     <div>
@@ -132,28 +124,7 @@ const Pagination: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* <ul className="pageNumbers">
-                <li>
-                    <button
-                        onClick={handlePrevbtn}
-                        disabled={currentPage == pages[0] ? true : false}
-                    >
-                        Prevs
-                    </button>
-                </li>
-                {pageDecrementBtn}
-                {renderPageNumbers}
-                {pageIncrementBtn}
 
-                <li>
-                    <button
-                        onClick={handleNextbtn}
-                        disabled={currentPage == pages[pages.length - 1] ? true : false}
-                    >
-                        Nexts
-                    </button>
-                </li>
-            </ul> */}
         </div>
     );
 };

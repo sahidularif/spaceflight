@@ -19,8 +19,11 @@ const DateFilter = () => {
             const currentDate = new Date();
             const lYear = currentDate.getFullYear() - 1;
             const getLastYearData =
-                filteredFlights.filter((data: IFlight) => data.lunchDate === lYear.toString());
-            console.log(lYear.toString())
+                filteredFlights.filter((data: IFlight) => {
+                    return data.lunchDate.getFullYear().toString() === lYear.toString()
+                });
+
+
             setFilteredFlights(getLastYearData)
         }
         // Filter by last month

@@ -1,4 +1,3 @@
-import rocket from '../assets/GypSkayF_o.png'
 import {IFlight} from '../models'
 // const [flights, setFlights] = useState()b
  type LunchType = {

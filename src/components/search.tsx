@@ -27,7 +27,7 @@ const Search = () => {
                 onBlur={handleBlur}
                 id="phone-number"
                 autoComplete="tel"
-                className="w-11/12 rounded-tl-md rounded-bl-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                className="w-11/12 sm:w-7/12 lg:w-6/12 rounded-tl-md rounded-bl-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
             />
             {/* <div className="bg-primary w-12 rounded-tr-md rounded-br-md inset-y-0 left-0 justify-center flex items-center text-white"> */}
                 <button className=' bg-primary w-[42px] rounded-tr-md rounded-br-md inset-y-0 left-0 justify-center flex items-center text-white' type="button" onClick={handleSubmit}>
