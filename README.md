@@ -31,17 +31,16 @@
    ```
 4.Run
 
-   ``````shell
+   ```shell
 
    npm start or yarn start
    ```
 
 ## 🚀 Open the code and start customizing!
-****
 
-   Your site is now running at http://localhost:3000!
+    Your site is now running at http://localhost:3000!
 
-   Edit `src/app.tsx` to see your site update in real-time!
+    Edit `src/pages/index.js` to see your site update in real-time!
 
 ## Demo
 
