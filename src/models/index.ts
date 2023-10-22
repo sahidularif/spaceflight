@@ -4,6 +4,7 @@ export interface IFlight {
   lunchStatus: boolean;
   missionName: string;
   rocketName: string;
+  upcoming: boolean;
   image: string;
 }
 export interface IGetFlightsResponse {

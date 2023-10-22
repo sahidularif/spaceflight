@@ -11,6 +11,7 @@ const StatusFilter = () => {
         if (e.target.value == 'success') {
             const getSuccessMission = filteredFlights.filter((data: IFlight) => data.lunchStatus === true);
            setFilteredFlights(getSuccessMission)
+           console.log(getSuccessMission)
         }
         // Filter by last week
         if (e.target.value == 'failure') {
@@ -28,7 +29,7 @@ const StatusFilter = () => {
                     name="country"
                     onChange={handleChange}
                     autoComplete="country-name"
-                    className="block w-full rounded-sm border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:primary sm:max-w-xs sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-2 px-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:primary sm:max-w-xs sm:text-sm sm:leading-6"
                 >
                     <option disabled selected>By Lunch Status</option>
                     <option value="success">Success</option>

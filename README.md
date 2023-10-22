@@ -1,27 +1,80 @@
-# React + TypeScript + Vite
+<p align="center">
+  <a href="https://vitejs.dev/guide/" target="_blank">
+    <img alt="Gatsby" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1039px-Vitejs-logo.svg.png" width="60" />
+  </a>
+  <a href="https://react.dev/learn" target="_blank">
+    <img alt="Gatsby" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP-XwyYEL4im6w38PRPkwSGel4aiKEiqBIzArb0DA&s" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Vite + React minimal starter
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Quick start
 
-Currently, two official plugins are available:
+**Create a React Application.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Please follow the below instructions to run this project in your computer:
 
-## Expanding the ESLint configuration
+1.Clone this repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    https://github.com/sahidularif/spaceflight
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+2.  **Start developing.**
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+    Navigate into your new site’s directory and start it up.
+
+    ```shell
+    cd spaceflight/
+    ```
+3.To install all req'd dependencies run:
+
+```shell
+  npm install
 ```
+4.Run
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+``````shell
+
+ npm start or yarn start
+```
+**Open the code and start customizing!**
+
+    Your site is now running at http://localhost:3000!
+
+    Edit `src/app.tsx` to see your site update in real-time!
+
+## Demo
+
+[AppLink](https://vibrant-booth-1de4aa.netlify.app/)
+### STACK:
+**React** for frontend,
+
+**Tailwindcss** as a UI library
+
+**Context Api** for state management,
+
+**Netlify** for hosting the App
+** Key features **
+### Ability to filter flight: (Reselect)
+* by rocket name;
+* by last week;
+* by last month;
+* by last year;
+* by success status;
+* by upcomming;
+
+### Data Statistics: (Reselect)
+* Mission name
+* Launch date
+* Rocket name
+* Success status
+
+### Ability to paginate
+
+#### More about filter: 
+* Filter happens without manual form submit.
+* Clearing the filter returns the collection to its original state.

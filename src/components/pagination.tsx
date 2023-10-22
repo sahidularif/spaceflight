@@ -12,7 +12,7 @@ const Pagination: React.FC = () => {
     const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
 
-    const handleClick = (event: React.HTMLAttributes) => {
+    const handleClick = (event: ChangeEvent<HTMLInputElement>) => {
         setcurrentPage(Number(event.target.id));
     };
 
@@ -40,7 +40,7 @@ const Pagination: React.FC = () => {
                     key={number}
                     id={number}
                     onClick={handleClick}
-                    className="relative inline-flex items-center px-4 py-2 text-sm font-semibold focus:bg-primary text-primary ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-primary focus:z-20 focus:outline-offset-0">
+                    className="relative inline-flex items-center px-4 py-2 text-sm font-semibold focus:bg-black text-primary ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-primary focus:z-20 focus:outline-offset-0">
                     {number}
                 </a>
             );
@@ -53,9 +53,6 @@ const Pagination: React.FC = () => {
         fetchFlight()
     }, [fetchFlight])
 
-    // const handleClick = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setcurrentPage(Number(event.target.value));
-    // };
 
     const handleNextbtn = () => {
         setcurrentPage(currentPage + 1);
@@ -99,7 +96,7 @@ const Pagination: React.FC = () => {
 
 
     return (
-        <div>
+        <div className=' mt-6'>
             <Lunches data={currentItems} />
             <div className="flex flex-row gap-5 items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
 

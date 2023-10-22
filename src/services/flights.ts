@@ -17,6 +17,7 @@ export const getFlights = async () => {
       lunchStatus: item.launch_success,
       missionName: item.mission_name,
       rocketName: item.rocket.rocket_name,
+      upcoming: item.upcoming,
       image: item.links.mission_patch_small,
     }
     return items;

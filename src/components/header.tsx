@@ -1,17 +1,47 @@
+import { ChangeEvent, useState } from "react";
 import Search from "./search";
 import DateFilter from "./dateFilter";
 import StatusFilter from "./statusFilter";
+import useFlights from "../context/useFlight";
+import { IFlight } from "../models";
 const Header = () => {
-    return (
-        <div className="container mx-auto text-center mb-4">
+    const { filteredFlights, setFilteredFlights } = useFlights()
 
-            <div className="flex justify-between sm:flex-col md:flex-row">
-                <div className=" sm:w-full border">
-                    <Search />
+    const clickHandler = (e: ChangeEvent<HTMLInputElement>) => {
+
+        if (e.target.checked === true) {
+            const getUpcommingMission = filteredFlights.filter((data: IFlight) => data.upcoming === true);
+            setFilteredFlights(getUpcommingMission)
+        }
+
+        setFilteredFlights(filteredFlights)
+
+
+
+    }
+    return (
+        <div className="container header-filter mx-auto text-center grid grid-cols-1 grid-rows-2 
+        justify-center items-center sm:grid-rows-1 sm:grid-cols-2 sm:justify-between sm:items-end  ">
+
+            <div className="search border justify-center items-center text-center sm:items-start sm:justify-start">
+                <Search />
+            </div>
+
+            <div className="filter sm:flex sm:flex-col sm:items-end sm:w-full">
+
+                <div className="border flex">
+                    <div className="">
+                        <input
+                            onClick={(e) => clickHandler(e)}
+                            className="form-check-input" type="checkbox" id="gridCheck1" />
+                        <label className="form-check-label " htmlFor="gridCheck1">
+                            &nbsp;Show upcoming only
+                        </label>
+                    </div>
                 </div>
-                <div className="flex justify-between border w-3/12">
+                <div className="gap-5 border sm:flex sm:flex-row">
+                    <StatusFilter />
                     <DateFilter />
-                    <StatusFilter/>
                 </div>
             </div>
         </div>

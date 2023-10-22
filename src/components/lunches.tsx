@@ -8,7 +8,7 @@ const Lunches = ({data}: LunchType) => {
     
     return (
         <div className="container mx-auto">
-            <div className="w-full lunches grid md:grid-rows-3 md:grid-cols-3 grid-cols-1 grid-rows-1 ">
+            <div className="w-full lunches grid grid-cols-1 grid-rows-9 sm:grid-rows-5 sm:grid-cols-2 lg:grid-rows-3 lg:grid-cols-3">
                 {
                     data.map((flight, index) => {
                         return (
