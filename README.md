@@ -44,7 +44,9 @@
 
 ## Demo
 
-[App Link](https://vibrant-booth-1de4aa.netlify.app/)
+[Open App](https://vibrant-booth-1de4aa.netlify.app/)
+
+<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
 
 ### STACK:
 
