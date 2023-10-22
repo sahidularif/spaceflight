@@ -132,25 +132,29 @@ body {
     line-height: 100%;
     color: white;
 }
-.header-filter {
-    
+.footer {
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+    padding-bottom: 20px;
 }
+
 // 
 @media only screen and (min-width: 64em) {
     body {
-        padding: 6rem;
+        padding: 6rem 6rem 0 6rem;
     }
 }
 
 @media only screen and (max-width: 1023px) {
     body {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
     }
 }
 
 @media only screen and (max-width: 767px) {
     body {
-        padding: 2rem;
+        padding: 2rem 2rem 0 2rem;
     }
 }
 
