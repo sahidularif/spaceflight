@@ -40,11 +40,11 @@
 
     Your site is now running at http://localhost:3000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    Edit `src/app.tsx` to see your site update in real-time!
 
 ## Demo
 
-[AppLink](https://vibrant-booth-1de4aa.netlify.app/)
+[App Link](https://vibrant-booth-1de4aa.netlify.app/)
 
 ### STACK:
 
